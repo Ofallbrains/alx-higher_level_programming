@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""blocked class module"""
+""" LockedClass
+"""
 
 
 class LockedClass:
-
-    __slots__ = ['first_name']
+    __slots__= ['first_name']
