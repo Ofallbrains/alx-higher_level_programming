@@ -1,0 +1,58 @@
+The ``1-my_list`` module
+======================
+
+Using ``my_list``
+-------------------
+Checking docstring for module:
+>>> __import__('1-my_list').__doc__ != None
+True
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> len(MyList.__doc__) > 0
+True
+
+checking empty object
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+
+checking an instance my_list with 3 elements
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> print(my_list)
+[1, 4, 2]
+>>> my_list.print_sorted()
+[1, 2, 4]
+
+checking an instance my_list with 3 elements equales
+>>> my_list = MyList()
+>>> my_list.append(2)
+>>> my_list.append(2)
+>>> my_list.append(2)
+>>> print(my_list)
+[2, 2, 2]
+>>> my_list.print_sorted()
+[2, 2, 2]
+
+checking an instance my_list with 1 elements
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> print(my_list)
+[1]
+>>> my_list.print_sorted()
+[1]
+
+checking negative elements
+>>> my_list = MyList()
+>>> my_list.append(-2)
+>>> my_list.append(-12)
+>>> my_list.append(-5)
+>>> print(my_list)
+[-2, -12, -5]
+>>> my_list.print_sorted()
+[-12, -5, -2]
