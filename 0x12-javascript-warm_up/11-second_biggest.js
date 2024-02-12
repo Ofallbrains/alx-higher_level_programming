@@ -1,9 +1,10 @@
 #!/usr/bin/node
-// script that searches the second biggest integer
-// const string = process.argv.length;
-// if (string < 4) {
-//   console.log('0');
-//   } else {
-//     const counter = process.argv.sort((a, b) => a - b);
-//       console.log(counter[counter.length - 2]);
-//       }
+if (process.argv.length <= 3) {
+	  console.log(0);
+} else {
+	  const args = process.argv
+	    .map(Number)
+	    .slice(2, process.argv.length)
+	    .sort((a, b) => a - b);
+	  console.log(args[args.length - 2]);
+}
